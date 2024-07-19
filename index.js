@@ -1,12 +1,8 @@
-function superbowlWin(record) {
-    for(let entry of record) {
-        if(entry.result==="W") {
-          return  entry.year==="2015";
-        
-        }
-        else {
-            return undefined;
-        }
-    }
-}
 
+
+function superbowlWin(record) {
+    const winRecord = record.find(game => game.result === 'W');
+    return winRecord ? winRecord.year : undefined;
+  }
+  
+  
